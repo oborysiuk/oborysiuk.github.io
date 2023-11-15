@@ -1,5 +1,6 @@
 'use strict';
 
+
 const taskInput = document.querySelector('.task-input');
 const taskList = document.querySelector('.collection');
 const clearButton = document.querySelector('.clear-tasks');
