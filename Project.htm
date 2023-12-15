@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  
+    <title>Calendar</title>
+  </head>
+  <body class="w-75">
+    <div class="container container-md position-absolute top-0 start-50 translate-middle-x ">
+      <div class="tab container-md mt-3 text-center">
+        <button class="calculator-link btn btn-secondary btn-lg">Days Calculator</button>
+        <button class="state-holiday-link btn btn-secondary btn-lg">State Holidays</button>
+      </div>
+      <hr class="border border-danger border-2 opacity-50">
+      <div class="tabcontent tab-calculator">
+        <div class="container w-60">
+          <div class="row p-2">
+            <div class="col text-center">
+              <h5>Start Date:</h5>
+            </div>
+          <div class="col">
+            <input type="date" class="start"/>
+          </div>
+          </div>
+          <div class="row">
+          <div class="col text-center">
+            <h5>End Date:</h5>
+          </div>
+          <div class="col">
+            <input type="date" class="end"/>
+          </div>
+          </div>
+        </div>
+        <div class="preselection row w-50% p-3">
+          <div class="p-1">
+            <h6>Choose range:</h6>
+          </div>
+          <div class="p-1">
+            <button class ="week btn btn-outline-dark btn-sm">Week (7 days)</button>
+          </div>
+          <div class="p-1">
+            <button class = "month btn btn-outline-dark btn-sm">Month (30 days)</button>
+          </div>
+        </div>
+        <div class="row p-2">
+          <div class="col">
+            <select class="form-select day-type">
+              <option value="all">All days</option>
+              <option value="weekdays">Weekdays</option>
+              <option value="weekend">Weekends</option>
+            </select>
+          </div>
+          <div class="col">
+            <select class="measurement form-select">
+              <option value="day" data-multiplier="1">Number of days</option>
+              <option value="hour" data-multiplier="24">Number of hours</option>
+              <option value="min" data-multiplier="1440">Number of minutes</option>
+              <option value="sec" data-multiplier="86400">Number of seconds</option>
+            </select>
+          </div>
+        </div>
+        <hr class="border border-danger border-2 opacity-50">
+        <div class="container-md p-3 d-flex justify-content-center">
+          <button class = "calc-button btn btn-secondary">Calculate</button>
+        </div>
+        <hr class="border border-danger border-2 opacity-50">
+        <div>
+          <div>
+            <table class="table table-result table-striped">
+              <thead>
+                <th scope="col">Start Date</th>
+                <th scope="col">End Date</th>
+                <th scope="col">Unit</th>
+                <th scope="col">Result</th>
+              </thead>
+              <tbody class="table-body">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="tabcontent tab-state-holidays" style="display:none">
+        <div class="row">
+          <div class="col">
+            <select class="country form-select">
+              <option disabled selected class ="defalt-option-country">Choose the country:</option>
+            </select >
+          </div>
+          <div class="col"> 
+            <select class="year form-select">
+            </select >
+          </div>
+        </div>
+        <hr class="border border-danger border-2 opacity-50">
+        <div>
+          <table class="table table-holidays table-striped">
+            <thead>
+              <th scope="col">Date
+                <i style="font-size:14px" class="fa filter-icon" data-direction="asc" >&#xf0b0;</i>
+              </th>
+              <th scope="col">Name</th>
+            </thead>
+            <tbody class="table-body-tab-2">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="Project.js" type="module"></script>
+</html>
